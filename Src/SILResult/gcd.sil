@@ -1,0 +1,39 @@
+	proc	16	1	1
+	str.i	1	4
+	str.i	1	0
+	lod.i	1	0
+	str.i	1	8
+	lod.i	1	4
+	str.i	1	12
+	lod.i	1	8
+	ldc.i	0
+	eq.i
+	fjp	##1
+	lod.i	1	12
+	retv.i
+label	##1
+label	##2
+	lod.i	1	12
+	ldc.i	0
+	ne.i
+	fjp	##3
+	lod.i	1	8
+	lod.i	1	12
+	gt.i
+	fjp	##4
+	lod.i	1	8
+	lod.i	1	12
+	sub.i
+	str.i	1	8
+	ujp	##5
+label	##4
+	lod.i	1	12
+	lod.i	1	8
+	sub.i
+	str.i	1	12
+label	##5
+	ujp	##2
+label	##3
+	lod.i	1	8
+	retv.i
+

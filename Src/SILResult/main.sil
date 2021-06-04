@@ -1,0 +1,8 @@
+	proc	4	1	1
+	ldc.i	5
+	str.i   1   0
+	ldp
+	lod.i   1   0
+	call	&fmt.Println
+	ret
+

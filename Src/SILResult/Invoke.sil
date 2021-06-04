@@ -1,0 +1,36 @@
+	proc	24	1	1
+	str.p	1	0
+	lda.p	0	@0
+	str.p	1	4
+	lda.p	0	@1
+	str.p	1	8
+	ldp
+	lod.p	1	4
+	ldp
+	lod.p	1	8
+	call	&[]byte
+	call	&stub.PutState
+	lda.p	0	@2
+	lda.p	0	@3
+	add
+	str.p	1	12
+	ldp
+	lod.p	1	12
+	call	&stub.GetState
+	str.p	1	16
+	str.p	1	20
+	lod.p	1	20
+	ldc.i	0
+	ne.i
+	fjp	##1
+	ldp
+	ldp
+	call	&err.Error
+	call	&shim.Error
+	retv.t
+label	##1
+	ldp
+	lod.p	1	16
+	call	&shim.Success
+	retv.t
+

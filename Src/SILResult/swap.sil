@@ -1,0 +1,11 @@
+	proc	16	1	1
+	str.i	1	4
+	str.i	1	0
+	lod.i	1	4
+	str.i	1	8
+	lod.i	1	0
+	str.i	1	12
+	lod.i	1	8
+	lod.i	1	12
+	retmv	8
+

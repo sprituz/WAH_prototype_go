@@ -1,8 +1,8 @@
 package main
 
 import (
-	"github.com/hyperledger/fabric/core/chaincode/shim"
-	"github.com/hyperledger/fabric/protos/peer"
+	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/hyperledger/fabric-protos-go/peer"
 )
 
 type SimpleAsset struct {
@@ -16,7 +16,7 @@ var myMap = map[int]int{
 }
 
 func (t *SimpleAsset) Invoke(stub shim.ChaincodeStubInterface) peer.Response {
-	
+
 	result := 0
 	for i, ii := range myMap {
 		result = result + i + ii

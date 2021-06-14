@@ -1,8 +1,8 @@
 package main
 
 import (
-"github.com/hyperledger/fabric/core/chaincode/shim"
-"github.com/hyperledger/fabric/protos/peer"
+	"github.com/hyperledger/fabric-chaincode-go/shim"
+	"github.com/hyperledger/fabric-protos-go/peer"
 )
 
 type SimpleAsset struct {
@@ -23,5 +23,3 @@ func (t *SimpleAsset) Invoke(stub shim.ChaincodeStubInterface) peer.Response {
 
 	return shim.Success([]byte("key1"))
 }
-
-

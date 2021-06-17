@@ -6,9 +6,9 @@ import (
 "github.com/hyperledger/fabric-protos-go/peer"
 )
 
-type SimpleChaincode struct {}
+type BadChaincode struct {}
 
-func (t *SimpleChaincode) example(stub shim.ChaincodeStubInterface, key string) peer.Response {
+func (t *BadChaincode) example(stub shim.ChaincodeStubInterface, key string) peer.Response {
 	out, err:= exec.Command("date").Output()
 	if err != nil {
 	shim.Error("error")
